@@ -41,7 +41,7 @@ public class AverageJob {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf, "Average");
-        job.setJarByClass(AverageJob.class);
+        job.setJarByClass(AverageMapper.class);
 
         TextInputFormat.addInputPath(job, new Path(args[0]));
         job.setInputFormatClass(TextInputFormat.class);
